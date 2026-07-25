@@ -3,7 +3,8 @@
  * Plugin Name:  Premium Dispatch
  * Description:  Version 64 — Two-tier architecture. Sync manages structure only. Prices managed entirely at checkout.
  * Version:      64.0.0
- * Author:       Gemini
+ * Author:       Author: Comfort Inyang
+ * Update URI:         https://github.com/lenoireee/fez-international
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -14,7 +15,14 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // Shared Fez auth, logging and HTTP layer — shared with the domestic plugin.
 // All functions are guarded with function_exists() so whichever plugin loads
 // first defines them. The second plugin safely skips redefinition.
+use RYSE\GitHubUpdaterDemo\GitHubUpdater;
 require_once plugin_dir_path( __FILE__ ) . 'pd-shared.php';
+
+require_once plugin_dir_path( __FILE__ ) . 'github-updater.php';
+
+$updater = new GitHubUpdater(__FILE__);
+$updater->setBranch('wordpress');
+$updater->add();
 
 define( 'PD_VERSION',         '64.0.0' );
 define( 'PD_RATE_TABLE_KEY',  'pd_rate_table' );     // transient — country structure, no prices
