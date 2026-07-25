@@ -1,12 +1,13 @@
 <?php
 /**
- * Plugin Name:  Premium Dispatch
+ * Plugin Name:  FEZ International
  * Description:  Version 64 — Two-tier architecture. Sync manages structure only. Prices managed entirely at checkout.
  * Version:      64.0.0
  * Author:       Author: Comfort Inyang
- * Update URI:         https://github.com/lenoireee/fez-international
+ * Update URI:   https://github.com/lenoireee/fez-international
  */
 
+use RYSE\GitHubUpdaterDemo\GitHubUpdater;
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // ---------------------------------------------------------------------------
@@ -15,9 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 // Shared Fez auth, logging and HTTP layer — shared with the domestic plugin.
 // All functions are guarded with function_exists() so whichever plugin loads
 // first defines them. The second plugin safely skips redefinition.
-use RYSE\GitHubUpdaterDemo\GitHubUpdater;
-require_once plugin_dir_path( __FILE__ ) . 'pd-shared.php';
 
+require_once plugin_dir_path( __FILE__ ) . 'pd-shared.php';
 require_once plugin_dir_path( __FILE__ ) . 'github-updater.php';
 
 $updater = new GitHubUpdater(__FILE__);
