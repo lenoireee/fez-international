@@ -13,6 +13,11 @@ use WP_Error;
  * @package RYSE\GitHubUpdaterDemo
  * @version 1.2.2
  */
+
+if (class_exists(GitHubUpdater::class)) {
+    return;
+}
+
 class GitHubUpdater
 {
     /**
