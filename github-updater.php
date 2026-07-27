@@ -14,7 +14,7 @@ use WP_Error;
  * @version 1.2.2
  */
 
-if (class_exists(GitHubUpdater::class)) {
+if (class_exists('GitHubUpdater') || class_exists('RYSE\GitHubUpdaterDemo\GitHubUpdater')) {
     return;
 }
 
