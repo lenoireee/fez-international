@@ -1,8 +1,8 @@
 <?php
 /**
  * Plugin Name:  FEZ International
- * Description:  Version 64 — Two-tier architecture. Sync manages structure only. Prices managed entirely at checkout.
- * Version:      65.0.0
+ * Description:  Two-tier architecture. Sync manages structure only. Prices managed entirely at checkout.
+ * Version:      66.0.0
  * Author:       Author: Comfort Inyang
  * Update URI:   https://github.com/lenoireee/fez-international
  */
